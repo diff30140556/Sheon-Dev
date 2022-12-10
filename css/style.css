@@ -1,0 +1,68 @@
+:root{
+    --1border:1px solid #000;
+}
+
+/* initialize setting */
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+a{
+    text-decoration: none;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* center the page */
+.wrap{
+    margin: 0 auto;
+}
+
+/* header styling */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: var(--1border);
+}
+
+/* nav-bar styling */
+.nav-bar{
+    display: flex;
+}
+.nav-bar li a{
+    padding: 10px 15px;
+    border: var(--1border);
+}
+
+/* Banner's styling */
+.banner{
+    height: 500px;
+    border: var(--1border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner h2{
+    /* text-align: center; */
+}
+
+/* About me section */
+.about-me h2{
+    text-align: center;
+}
+
+/* about-me content */
+.about-me-content{
+    display: flex;
+}
+
+.avatar{
+    width: 500px;
+    border: var(--1border);
+}
