@@ -19,6 +19,7 @@ a{
 
 body{
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 
@@ -33,27 +34,73 @@ header{
     justify-content: space-between;
     align-items: center;
     border: var(--1border);
+    padding: 0 30px 0 50px;
+    background: rgba(173, 230, 255, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.logo a{
+    padding: 10px 15px;
+    font-size: 1.2em;
+    color: rgba(173, 230, 255,0.7);
+    transition: 0.3s ease-out;
 }
 
 /* nav-bar styling */
 .nav-bar{
     display: flex;
 }
-.nav-bar li a{
-    padding: 10px 15px;
-    border: var(--1border);
+.nav-bar li{
+    margin: 0 5px;
 }
+.nav-bar li a{
+    display: block;
+    padding: 15px 25px;
+    /* border: var(--1border); */
+    font-size: 1.3em;
+    font-weight: 600;
+    border-radius: 8px;
+    color: rgba(173, 230, 255,0.5);
+    transition: 0.2s ease-in-out;
+    /* background: rgba(49, 81, 149,0.6); */
+}
+
+.nav-bar li a:hover{
+    color: rgba(173, 230, 255,0.9);
+}
+
+.logo a:hover{
+    color: rgba(255, 209, 118, 0.75);
+    text-shadow: 0px 0px 8px rgba(255, 137, 3, 0.8);
+}
+
 
 /* Banner's styling */
 .banner{
-    height: 500px;
+    height: 100vh;
     border: var(--1border);
-    display: flex;
-    justify-content: center;
     align-items: center;
+    background: url(https://i.imgur.com/LTJLw1B.jpg) center no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    display: flex;
+
 }
 .banner h2{
-    /* text-align: center; */
+    /* margin-left: 60px; */
+    transform: translate(65px,20px);
+    color: rgba(173, 230, 255, 0.25);
+    font-size: 7.5em;
+    line-height: 1.3em;
+    letter-spacing: 8px;
+    text-transform:uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+}
+.banner h2::first-letter{
+    /* font-size: 2em; */
 }
 
 /* About me section */
@@ -88,7 +135,6 @@ header{
 .my-skills{
     border: var(--1border);
     padding: 5% 10%;
-    transform:;
 }
 
 .my-story h3,
