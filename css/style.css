@@ -17,6 +17,10 @@ a{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 
 /* center the page */
 .wrap{
@@ -53,16 +57,108 @@ header{
 }
 
 /* About me section */
-.about-me h2{
+.about-me h2,
+.my-works h2{
     text-align: center;
 }
 
 /* about-me content */
 .about-me-content{
     display: flex;
+    justify-content: center;
+    padding: 5% 10%;
+    transform: translateX(60px);
 }
-
+/* picture */
 .avatar{
     width: 500px;
+    height: 600px;
     border: var(--1border);
+}
+
+.introduce{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(-60px);
+}
+
+/* introduce setting */
+.my-story,
+.my-skills{
+    border: var(--1border);
+    padding: 5% 10%;
+    transform:;
+}
+
+.my-story h3,
+.my-skills h3{
+    text-align: center;
+}
+/* skill list styling  */
+.skill-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.skill-list li{
+    width: 45%;
+    border: var(--1border);
+    padding: 5px 15px;
+}
+
+/* My works section */
+.my-works{
+    padding: 5% 5% 10%;
+}
+
+.portfolio{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* work-list card */
+.works-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.works-card li{
+    width: 32%;
+    height: 400px;
+    border: var(--1border);
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+.works-card .move-down{
+    border: 1px solid red;
+    transform: translateY(80px);
+}
+
+/* Contact me section */
+.contact-me{
+    padding: 5% 0;
+}
+
+.contact-me h2{
+    text-align: center;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+}
+
+.map,
+.form{
+    width: 50%;
+    height: 500px;
+    border: var(--1border);
+}
+
+footer{
+    border: var(--1border);
+    text-align: center;
 }
