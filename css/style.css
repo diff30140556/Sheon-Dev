@@ -39,25 +39,33 @@ header{
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 99;
 }
 
 .logo a{
-    padding: 10px 15px;
+    display:block;
+    padding: 15px 15px;
     font-size: 1.2em;
     color: rgba(173, 230, 255,0.7);
-    transition: 0.3s ease-out;
+    transition: 0.2s linear;
+    /* border: var(--1border); */
+}
+.logo h1{
+    margin: 0;
 }
 
 /* nav-bar styling */
 .nav-bar{
     display: flex;
+    margin: 0;
 }
 .nav-bar li{
     margin: 0 5px;
 }
 .nav-bar li a{
     display: block;
-    padding: 15px 25px;
+    /* height: 100%; */
+    padding: 25px 25px;
     /* border: var(--1border); */
     font-size: 1.3em;
     font-weight: 600;
@@ -99,63 +107,136 @@ header{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight:lighter;
 }
-.banner h2::first-letter{
-    /* font-size: 2em; */
-}
 
 /* About me section */
 .about-me h2,
 .my-works h2{
     text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+    color: rgba(173, 230, 255,0.7);
 }
-
+.about-me{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(https://i.imgur.com/iuuTRwZ.jpg) center no-repeat;
+    /* background: linear-gradient(rgba(4, 3, 56, 0.779),rgb(19, 19, 19),rgb(0, 0, 0)); */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+.mask{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
 /* about-me content */
 .about-me-content{
     display: flex;
     justify-content: center;
-    padding: 5% 10%;
-    transform: translateX(60px);
+    border: var(--1border);
 }
 /* picture */
 .avatar{
-    width: 500px;
-    height: 600px;
+    width: 400px;
     border: var(--1border);
-}
-
-.introduce{
+    transform: translateX(30px);
+    border-radius: 10px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform: translateX(-60px);
+}
+.avatar img{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    /* height: 100%; */
+}
+
+.introduce{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(-30px);
+    padding: 5% 0;
+    width: 56%;
+}
+.introduce p{
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.5em;
 }
 
 /* introduce setting */
-.my-story,
+.my-story{
+    padding: 10px 10px 10px 30px;
+    border-radius: 10px 10px 0 0;
+    background: rgba(37, 37, 37, 0.6);
+}
 .my-skills{
-    border: var(--1border);
-    padding: 5% 10%;
+    padding: 10px 10px 10px 30px;
+    border-radius: 0 0 10px 10px;
+    background: rgba(37, 37, 37, 0.6);
 }
 
 .my-story h3,
 .my-skills h3{
     text-align: center;
+    font-size: 1.5em;
+    color: rgba(173, 230, 255,0.7);
 }
+
 /* skill list styling  */
 .skill-list{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .skill-list li{
-    width: 45%;
+    width: 42%;
     border: var(--1border);
-    padding: 5px 15px;
+    padding: 5px 10px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    margin: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    /* font-weight: 400; */
+}
+.skill-list li::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: var(--1border);
+    top: 0;
+    left: 0;
+    background: rgba(94, 147, 246, 0.903);
+    z-index: -1;
 }
 
 /* My works section */
 .my-works{
-    padding: 5% 5% 10%;
+    padding: 80px 0 160px 0;
+    background: url(https://images.unsplash.com/photo-1494995536846-47ab0fc5df1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80) no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    /* background-attachment: fixed; */
+}
+.my-works h2{
+    margin-bottom: 80px;
 }
 
 .portfolio{
@@ -171,16 +252,44 @@ header{
 }
 
 .works-card li{
-    width: 32%;
-    height: 400px;
+    width: 30%;
     border: var(--1border);
-    margin-bottom: 50px;
-    display: inline-block;
+    margin-bottom: 60px;
+    display:block;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .works-card .move-down{
     border: 1px solid red;
     transform: translateY(80px);
+}
+
+.card a{
+    display: block;
+    height: 100%;
+    position: relative;
+}
+.card a img{
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: 0.3s ease-in-out;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0,0.3);
+}
+.card a:hover img{
+    transform: scale(1.1);
+}
+.card a:hover .overlay{
+    display: none;
 }
 
 /* Contact me section */
