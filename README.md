@@ -5,7 +5,7 @@
 To have people know my works better and increase my exposure. I created this personal webpage that including my story, portfolio, and my contact information.
 This website uses semantic element and qualifies responsive web design. It supports any device with different screen size.
 
-Note: This is a prototype and the works it navigates to was my other old works. I will update the new works in the future. 
+Note: This is a prototype and the works it navigates to was my other old works. I will update the new works in the future.  
 
 ## Installation
 
@@ -28,7 +28,7 @@ N/A
 
 MIT License
 
-Copyright (c) [2022] [SunnWei]
+Copyright (c) [2022] [ShunWei]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
