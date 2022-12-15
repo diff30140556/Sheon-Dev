@@ -16,13 +16,13 @@
         <!-- Header -->
         <header>
             <div class="logo">
-                <h1><a href="">Sheon</a></h1>
+                <h1><a href="#">Sheon</a></h1>
             </div>
             <nav>
                 <ul class="nav-bar">
-                    <li><a href="">About</a></li>
-                    <li><a href="">Works</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#my-works">Works</a></li>
+                    <li><a href="#contact-me">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -33,7 +33,7 @@
         </section>
 
         <!-- About -->
-        <section class="about-me">
+        <section class="about-me" id="about-me">
             <div class="mask"></div>
             <h2>About Me</h2>
             <div class="about-me-content">
@@ -62,32 +62,32 @@
         </section>
 
         <!-- My works -->
-        <section class="my-works">
+        <section class="my-works" id="my-works">
             <div class="mask"></div>
             <h2>Works</h2>
             <div class="portfolio">
                 <ul class="works-card">
-                    <li class="card"><a href="">
+                    <li class="card" data-skill="HTML/CSS"><a href="">
                         <img src="https://i.imgur.com/A0pXhMQ.jpg" alt="">
                         <div class="overlay"></div>
                     </a></li>
-                    <li class="card move-down"><a href="">
+                    <li class="card move-down" data-skill="HTML/CSS/JS"><a href="">
                         <img src="https://i.imgur.com/or9FZdI.jpg" alt="">
                         <div class="overlay"></div>
                     </a></li>
-                    <li class="card"><a href="">
+                    <li class="card" data-skill="Vee.js"><a href="">
                         <img src="https://i.imgur.com/QpkndB3.jpg" alt="">
                         <div class="overlay"></div>
                     </a></li>
-                    <li class="card"><a href="">
+                    <li class="card" data-skill="React.js"><a href="">
                         <img src="https://i.imgur.com/cFfnN6D.jpg" alt="">
                         <div class="overlay"></div>
                     </a></li>
-                    <li class="card move-down"><a href="">
+                    <li class="card move-down" data-skill="Node.js/React"><a href="">
                         <img src="https://i.imgur.com/osE8CC1.jpg" alt="">
                         <div class="overlay"></div>
                     </a></li>
-                    <li class="card"><a href="">
+                    <li class="card" data-skill="SQL/Javascript"><a href="">
                         <img src="https://i.imgur.com/k71WOl9.jpg" alt="">
                         <div class="overlay"></div>
                     </a></li>
@@ -96,7 +96,7 @@
         </section>
 
         <!-- Contact Me -->
-        <section class="contact-me">
+        <section class="contact-me" id="contact-me">
             <div class="mask"></div>
             <h2>Contact Me</h2>
             <div class="contact-form">
@@ -110,7 +110,9 @@
                         <input type="email" id="email" name="email" placeholder="your email.." required>
                     </div>
                     <textarea name="message" id="message" placeholder="your message.."></textarea>
-                </form>
+                    
+                    <input type="button" value="send" class="send-btn">
+                    </form>
             </div>
         </section>
 
