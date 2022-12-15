@@ -2,7 +2,8 @@
     scroll-behavior: smooth;
     --jCenter:center;
     --aCenter:center;
-
+    --title-color:rgba(173, 230, 255,0.7);
+    --radius-10: 10px
 }
 
 /* initialize setting */
@@ -49,15 +50,20 @@ header{
     backdrop-filter: blur(3px);
 }
 
+/* Logo title styling */
 .logo a{
     display:block;
     padding: 15px 15px;
     font-size: 1.2em;
-    color: rgba(173, 230, 255,0.7);
+    color: var(--title-color);
     transition: 0.2s linear;
 }
 .logo h1{
     margin: 0;
+}
+.logo a:hover{
+    color: rgba(255, 209, 118, 0.75);
+    text-shadow: 0px 0px 8px rgba(255, 137, 3, 0.8);
 }
 
 /* nav-bar styling */
@@ -70,23 +76,15 @@ header{
 }
 .nav-bar li a{
     display: block;
-    /* height: 100%; */
     padding: 25px 25px;
     font-size: 1.3em;
     font-weight: 600;
     border-radius: 8px;
     color: rgba(173, 230, 255,0.5);
     transition: 0.2s ease-in-out;
-    /* background: rgba(49, 81, 149,0.6); */
 }
-
 .nav-bar li a:hover{
     color: rgba(173, 230, 255,0.9);
-}
-
-.logo a:hover{
-    color: rgba(255, 209, 118, 0.75);
-    text-shadow: 0px 0px 8px rgba(255, 137, 3, 0.8);
 }
 
 
@@ -112,27 +110,30 @@ header{
     font-weight:lighter;
 }
 
-/* About me section */
+/* All sections' title */
 .about-me h2,
 .my-works h2,
 .contact-me h2{
     text-align: center;
     font-size: 2em;
     margin-top: 0;
-    color: rgba(173, 230, 255,0.7);
+    color: var(--title-color)
 }
+
+/* About me section */
 .about-me{
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: var(--jCenter);
     background: url(https://i.imgur.com/iuuTRwZ.jpg) center no-repeat;
-    /* background: linear-gradient(rgba(4, 3, 56, 0.779),rgb(19, 19, 19),rgb(0, 0, 0)); */
     background-size: cover;
     background-attachment: fixed;
     position: relative;
     z-index: 1;
 }
+
+/* Filter effect div container */
 .mask{
     content: "";
     position: absolute;
@@ -143,6 +144,7 @@ header{
     background: rgba(0, 0, 0, 0.3);
     z-index: -1;
 }
+
 /* about-me content */
 .about-me-content{
     display: flex;
@@ -152,7 +154,7 @@ header{
 .avatar{
     width: 400px;
     transform: translateX(30px);
-    border-radius: 10px;
+    border-radius: var(--radius-10);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -161,10 +163,10 @@ header{
 .avatar img{
     display: block;
     width: 100%;
-    border-radius: 10px;
-    /* height: 100%; */
+    border-radius: var(--radius-10);
 }
 
+/* Introduce part */
 .introduce{ 
     display: flex;
     flex-direction: column;
@@ -179,23 +181,22 @@ header{
     line-height: 1.5em;
 }
 
-/* introduce setting */
-.my-story{
+/* introduce myself setting */
+.my-story,
+.my-skills{
     padding: 10px 10px 10px 30px;
-    border-radius: 10px 10px 0 0;
+    border-radius: var(--radius-10) 10px 0 0;
     background: rgba(37, 37, 37, 0.6);
 }
 .my-skills{
-    padding: 10px 10px 10px 30px;
     border-radius: 0 0 10px 10px;
-    background: rgba(37, 37, 37, 0.6);
 }
 
 .my-story h3,
 .my-skills h3{
     text-align: center;
     font-size: 1.5em;
-    color: rgba(173, 230, 255,0.7);
+    color: var(--title-color);
 }
 
 /* skill list styling  */
@@ -208,14 +209,14 @@ header{
     width: 42%;
     padding: 5px 10px;
     position: relative;
-    border-radius: 10px;
+    border-radius: var(--radius-10);
     overflow: hidden;
     text-align: center;
     margin: 5px;
     color: #fff;
     font-size: 1.2em;
-    /* font-weight: 400; */
 }
+/* Skill fill out color for background */
 .skill-list li::after{
     content: '';
     position: absolute;
@@ -245,7 +246,7 @@ header{
     margin: 0 auto;
 }
 
-/* work-list card */
+/* work-list card setting*/
 .works-card{
     display: flex;
     flex-wrap: wrap;
@@ -257,11 +258,11 @@ header{
     margin-bottom: 60px;
     display:block;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: var(--radius-10);
     border: 2px solid rgba(124, 124, 124,0.4);
     position: relative;
 }
-
+/* show used tools on the cards */
 .works-card li::after{
     content: attr(data-skill);
     position: absolute;
@@ -274,10 +275,12 @@ header{
     border-radius: 0 10px 10px 0;
 }
 
+/* moving down the middle card */
 .works-card .move-down{
     transform: translateY(80px);
 }
 
+/* work-list card setting */
 .card a{
     display: block;
     height: 100%;
@@ -290,6 +293,7 @@ header{
     object-fit: fill;
     transition: 0.3s ease-in-out;
 }
+/* overlay background effect for cards*/
 .overlay{
     position: absolute;
     top: 0;
@@ -318,13 +322,14 @@ header{
     z-index: 1;
 }
 
+/* form setting */
 .contact-form{
     margin-bottom: 50px;
 }
 .contact-form form{
     padding: 20px 0;
     width: 60%;
-    border-radius: 10px;
+    border-radius: var(--radius-10);
     display: flex;
     flex-direction: column;
     justify-content: var(--jCenter);
@@ -363,6 +368,7 @@ header{
 .contact-form textarea:focus{
     outline: 0.5px solid rgb(192, 192, 192);
 }
+/* auto-fill setting */
 input:-webkit-autofill { 
     -webkit-text-fill-color: #fff;
     transition: background-color 5000s ease-in-out 0s;
@@ -379,6 +385,7 @@ input:-webkit-autofill {
     color: rgb(220, 220, 220);
 }
 
+/* send button setting */
 .contact-form .send-btn{
     width: auto;
     padding: 6px 15px;
@@ -391,7 +398,7 @@ input:-webkit-autofill {
     color: #000;
 }
 
-
+/* footer */
 footer{
     text-align: center;
     width: 100%;
@@ -402,44 +409,46 @@ footer{
     background: rgba(173, 230, 255, 0.05);
 }
 
+/* responsive website setting (960px) */
 @media only screen and (max-width:960px) {
     .banner h2{
         font-size: 5.5em;
     }
-
+    
     .about-me-content{
         flex-direction: column;
         align-items:  var(--aCenter);
     }
-
+    
     .introduce{
         transform: none;
         width: 80%;
     }
-
+    
     .avatar{
         transform: none;
     }
-
+    
     .about-me{
         height: 100%;
         padding: 10% 0 5%;
     }
-
+    
     .works-card li{
         width: 45%;
         min-height: 300px;
     }
-
+    
     .works-card .move-down{
         transform: none;
     }
-
+    
     .contact-form form{
         width: 80%;
     }
 }
 
+/* responsive website setting (768px) */
 @media only screen and (max-width:768px) {
     header{
         flex-direction: column;
