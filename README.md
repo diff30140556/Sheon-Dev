@@ -13,7 +13,7 @@ N/A
 
 ## Usage
 
-To navigate this page, please [Click Here](https://diff30140556.github.io/module2-portfolio/).
+To navigate this page, please [Click Here](https://diff30140556.github.io/Sheon-Dev/).
 You will see my story, skills, previous works, and how to contact me by leaving your messages. Try to resize your webpage as well to see the display on different screen size.
 
     
